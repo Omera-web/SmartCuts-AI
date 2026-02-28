@@ -338,44 +338,61 @@ footer {
 
   <defs>
 
-    <!-- Glow gauche -->
-    <radialGradient id="glowLeft" cx="0%" cy="50%" r="60%">
-      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Glow droite -->
-    <radialGradient id="glowRight" cx="100%" cy="50%" r="60%">
-      <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#4f46e5" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Blur doux -->
-    <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="40" />
+    <!-- glow doux -->
+    <filter id="blurSoft">
+      <feGaussianBlur stdDeviation="2" />
     </filter>
 
   </defs>
 
-  <!-- HALO GAUCHE -->
-  <circle cx="0" cy="450" r="600"
-          fill="url(#glowLeft)"
-          filter="url(#softBlur)">
-    <animate attributeName="r"
-             values="600;650;600"
-             dur="12s"
-             repeatCount="indefinite"/>
-  </circle>
+  <!-- 👍 LIKE 1 -->
+  <g opacity="0.35">
+    <text x="200" y="800" fill="#818cf8" font-size="26" filter="url(#blurSoft)">👍</text>
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      values="0,0; 0,-900"
+                      dur="18s"
+                      repeatCount="indefinite"/>
+  </g>
 
-  <!-- HALO DROITE -->
-  <circle cx="1600" cy="450" r="600"
-          fill="url(#glowRight)"
-          filter="url(#softBlur)">
-    <animate attributeName="r"
-             values="600;650;600"
-             dur="14s"
-             repeatCount="indefinite"/>
-  </circle>
+  <!-- ❤️ HEART -->
+  <g opacity="0.35">
+    <text x="1400" y="750" fill="#fb7185" font-size="24">❤️</text>
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      values="0,0; 0,-900"
+                      dur="22s"
+                      repeatCount="indefinite"/>
+  </g>
+
+  <!-- 👍 LIKE POP (interaction) -->
+  <g opacity="0.6">
+    <text x="300" y="600" fill="#a78bfa" font-size="32">👍</text>
+
+    <!-- mouvement -->
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      values="0,0; 0,-900"
+                      dur="20s"
+                      repeatCount="indefinite"/>
+
+    <!-- effet like -->
+    <animateTransform attributeName="transform"
+                      type="scale"
+                      values="1;1.35;1"
+                      dur="2.8s"
+                      repeatCount="indefinite"/>
+  </g>
+
+  <!-- 💬 COMMENT -->
+  <g opacity="0.25">
+    <text x="1200" y="820" fill="#c4b5fd" font-size="22">💬</text>
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      values="0,0; 0,-900"
+                      dur="24s"
+                      repeatCount="indefinite"/>
+  </g>
 
 </svg>
   
