@@ -283,13 +283,6 @@ footer {
 @keyframes fadeDown { from{opacity:0;transform:translateY(-16px)} to{opacity:1;transform:translateY(0)} }
 
 /* SVG ANIMS */
-.logo-scissors { animation:scissorSnip 3s ease-in-out infinite; transform-origin:52% 52%; }
-.logo-glow     { animation:glowPulse 3s ease-in-out infinite; }
-.logo-film     { animation:filmSlide 4s ease-in-out infinite; }
-@keyframes scissorSnip { 0%,100%{transform:rotate(0deg)} 40%{transform:rotate(-8deg)} 60%{transform:rotate(3deg)} }
-@keyframes glowPulse   { 0%,100%{opacity:.6} 50%{opacity:1} }
-@keyframes filmSlide   { 0%,100%{transform:translateX(0)} 50%{transform:translateX(-3px)} }
-
 .mw1{animation:mwav 2s ease-in-out infinite .0s;transform-origin:center}
 .mw2{animation:mwav 2s ease-in-out infinite .25s;transform-origin:center}
 .mw3{animation:mwav 2s ease-in-out infinite .1s;transform-origin:center}
@@ -298,8 +291,8 @@ footer {
 @keyframes mwav{0%,100%{opacity:.2;transform:scaleY(.7)}50%{opacity:1;transform:scaleY(1.2)}}
 @keyframes micFlt{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
 
-.ar1{animation:aring 2.5s ease-out infinite .0s;transform-origin:55px 55px}
-.ar2{animation:aring 2.5s ease-out infinite .8s;transform-origin:55px 55px}
+.ar1{animation:aring 2.5s ease-out infinite .0s;transform-origin:52px 52px}
+.ar2{animation:aring 2.5s ease-out infinite .8s;transform-origin:52px 52px}
 .ad1{animation:adot 1.4s ease-in-out infinite .0s}
 .ad2{animation:adot 1.4s ease-in-out infinite .2s}
 .ad3{animation:adot 1.4s ease-in-out infinite .4s}
@@ -316,7 +309,7 @@ footer {
 .pl1{animation:pgrow 2.4s ease-in-out infinite .3s}
 .pl2{animation:pgrow 2.4s ease-in-out infinite .6s}
 .pl3{animation:pgrow 2.4s ease-in-out infinite .9s}
-.pchk{animation:pcheck 2.4s ease-in-out infinite .5s;transform-origin:76px 76px}
+.pchk{animation:pcheck 2.4s ease-in-out infinite .5s;transform-origin:72px 72px}
 @keyframes pcard{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 @keyframes pgrow{0%,20%{stroke-dashoffset:50;opacity:.3}70%,100%{stroke-dashoffset:0;opacity:.9}}
 @keyframes pcheck{0%,60%,100%{transform:scale(1)}80%{transform:scale(1.15)}}
@@ -329,8 +322,8 @@ footer {
 .wbl2{animation:wbg 2.5s ease-in-out infinite .5s}
 @keyframes wbf{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
 @keyframes wbg{0%,15%{stroke-dashoffset:30;opacity:.2}65%,100%{stroke-dashoffset:0;opacity:.85}}
-.wrk{animation:wrf 2.5s ease-in-out infinite;transform-origin:26px 24px}
-.wfl{animation:wff .35s ease-in-out infinite alternate;transform-origin:26px 40px}
+.wrk{animation:wrf 2.5s ease-in-out infinite;transform-origin:25px 24px}
+.wfl{animation:wff .35s ease-in-out infinite alternate;transform-origin:25px 38px}
 .ws1{animation:wst 2s ease-in-out infinite .0s}
 .ws2{animation:wst 2s ease-in-out infinite .6s}
 @keyframes wrf{0%,100%{transform:translateY(0) rotate(-12deg)}50%{transform:translateY(-5px) rotate(-12deg)}}
@@ -344,14 +337,17 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <img src="assets/Logo.png" alt="SmartCuts AI">
-    <span class="nav-beta">Bientôt disponible</span>
+  <img src="assets/Logo.png" alt="SmartCuts AI" style="height:42px;width:auto;">
+  <span class="nav-beta">Bientôt disponible</span>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
+
+  <!-- BUG FIX : div bien fermée, img avec taille fixe -->
   <div class="hero-logo-wrap">
-    <img src="assets/Logo.png" alt="SmartCuts AI">
+    <img src="assets/Logo.png" alt="SmartCuts AI" style="height:96px;width:auto;filter:drop-shadow(0 0 28px rgba(124,58,237,0.45));">
+  </div>
 
   <p class="hero-eyebrow">100% Français · Bientôt disponible</p>
 
@@ -375,6 +371,7 @@ footer {
     <span>Découvrir</span>
     <div class="scroll-line"></div>
   </div>
+
 </section>
 
 <!-- HOW IT WORKS -->
@@ -442,7 +439,7 @@ footer {
           <line x1="61" y1="61" x2="52" y2="52" stroke="#a78bfa" stroke-width="1" opacity=".4"/>
           <circle class="ad1" cx="43" cy="43" r="3.5" fill="#a78bfa"/>
           <circle class="ad2" cx="61" cy="43" r="3.5" fill="#818cf8"/>
-          <circle class="ad3" cx="52" cy="52" r="5"   fill="#c4b5fd"/>
+          <circle class="ad3" cx="52" cy="52" r="5" fill="#c4b5fd"/>
           <circle class="ad4" cx="43" cy="61" r="3.5" fill="#818cf8"/>
           <circle class="ad5" cx="61" cy="61" r="3.5" fill="#a78bfa"/>
         </svg>
@@ -554,7 +551,7 @@ footer {
 <!-- CTA FINAL -->
 <div class="cta-final">
   <h2>Chaque épisode non repurposé,<br><em>c'est du contenu perdu.</em></h2>
-  <p>Rejoins la waitlist et sois parmi les premiers à accéder à SmartCuts AI dès la bêta.</p>
+  <p>Rejoins la waitlist et sois parmi les premiers à accéder à SmartCuts AI.</p>
   <a href="https://forms.gle/1k8ZwdBCQYYLtoLT6" target="_blank" class="btn-waitlist">
     Rejoindre la waitlist
     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7.5 3l4 4-4 4" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -563,7 +560,7 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-  <img src="assets/Logo.png" alt="SmartCuts AI">
+  <img src="assets/Logo.png" alt="SmartCuts AI" style="height:32px;width:auto;">
   <span class="foot-copy">© 2025 SmartCuts AI · Tous droits réservés</span>
 </footer>
 
@@ -574,10 +571,8 @@ function resize() { canvas.width = window.innerWidth; canvas.height = window.inn
 resize();
 window.addEventListener('resize', resize);
 
-// Floating lines
-const lines = Array.from({length: 18}, (_, i) => ({
-  x1: Math.random(),
-  y1: Math.random(),
+const lines = Array.from({length: 18}, () => ({
+  x1: Math.random(), y1: Math.random(),
   angle: Math.random() * Math.PI * 2,
   len: 0.08 + Math.random() * 0.12,
   speed: (Math.random() * 0.0002 + 0.0001) * (Math.random() > 0.5 ? 1 : -1),
@@ -585,16 +580,12 @@ const lines = Array.from({length: 18}, (_, i) => ({
   thickness: 0.5 + Math.random() * 0.8,
 }));
 
-// Diagonal grid lines (static, very subtle)
 function drawGrid(W, H) {
   ctx.strokeStyle = 'rgba(255,255,255,0.028)';
   ctx.lineWidth = 0.8;
   const GAP = 90;
   for (let x = -H; x < W + H; x += GAP) {
-    ctx.beginPath();
-    ctx.moveTo(x, 0);
-    ctx.lineTo(x + H, H);
-    ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x + H, H); ctx.stroke();
   }
 }
 
@@ -603,30 +594,20 @@ function draw() {
   t++;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   const W = canvas.width, H = canvas.height;
-
-  // Static diagonal grid
   drawGrid(W, H);
-
-  // Moving floating lines
   lines.forEach(l => {
     l.angle += l.speed;
-    const cx = l.x1 * W;
-    const cy = l.y1 * H;
+    const cx = l.x1 * W, cy = l.y1 * H;
     const len = l.len * Math.min(W, H);
     const x2 = cx + Math.cos(l.angle) * len;
     const y2 = cy + Math.sin(l.angle) * len;
-
     const pulse = 0.5 + 0.5 * Math.sin(t * 0.012 + l.x1 * 8);
     ctx.globalAlpha = l.opacity * pulse;
     ctx.strokeStyle = 'rgba(255,255,255,0.9)';
     ctx.lineWidth = l.thickness;
     ctx.lineCap = 'round';
-    ctx.beginPath();
-    ctx.moveTo(cx, cy);
-    ctx.lineTo(x2, y2);
-    ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(x2, y2); ctx.stroke();
   });
-
   ctx.globalAlpha = 1;
   requestAnimationFrame(draw);
 }
